@@ -1,0 +1,478 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Default text color */
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6; /* Header background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px; /* Logo height */
+}
+
+.custom-header nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex;
+    gap: 1rem; /* Space between navigation items */
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px; /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%; /* Circular user image */
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px; /* Adjust this value to add more or less space */
+}
+
+/* Container for layout */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block; /* Show dropdown content when dropdown is active */
+}
+
+/* Dashboard column styles */
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px; /* Start below the header */
+    height: calc(100% - 80px); /* Full height minus header */
+    width: 200px; /* Fixed width */
+    background-color: #fff; /* White background */
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA; /* Right border */
+    overflow-y: auto; /* Scroll if content is too long */
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA; /* Bottom border */
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active, .dashboard-button:hover {
+    background-color: #F2FAFF; /* Change background on hover or active state */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px; /* Ensure content starts below the fixed header */
+    margin-left: 200px; /* Adjust for the width of the fixed dashboard column */
+    overflow-y: auto; /* Enable vertical scrolling for content */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.clients-management {
+    margin-bottom: 40px; /* Space below clients management section */
+}
+
+.management-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4680A6; /* Title color */
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 20px; /* Space below tab buttons */
+}
+
+.tab-button {
+    padding: 10px 70px; /* Increased horizontal padding */
+    min-width: 120px; /* Set a minimum width */
+    border: 1px solid #4680A6; /* Border style */
+    background-color: #fff; /* Background color */
+    color: #4680A6; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    color: #fff; /* Change background and text color on hover or active state */
+}
+
+.project-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust the gap between form groups as needed */
+}
+
+.project-form .form-group {
+    flex: 1 1 calc(50% - 1rem); /* Adjusting width to take half the available space minus the gap */
+    min-width: 200px; /* Ensure that the fields have a minimum width */
+}
+
+.project-form .form-group label {
+    display: block; /* Ensure labels are on top of their input fields */
+    margin-bottom: 0.5rem; /* Add spacing between label and input */
+    color: #4680A6; /* Set label color to blue */
+}
+
+.project-form .form-group input {
+    width: 80%; /* Reduce input field width to 80% */
+    padding: 0.5rem; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 1px solid #B2B2B2; /* Set border style, width, and color */
+    border-radius: 50px; /* Increase border radius to create rounded corners */
+}
+
+.project-form .form-group select {
+    width: 80%; /* Reduce input field width to 80% */
+    padding: 0.5rem; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 1px solid #B2B2B2; /* Set border style, width, and color */
+    border-radius: 50px; /* Increase border radius to create rounded corners */
+    appearance: none; /* Remove default arrow in some browsers */
+    background-color: #fff; /* Ensure the background is the same */
+    padding-right: 30px; /* Add some padding to the right for the arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.create-order-button {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px; /* Rounded corners */
+}
+
+.create-order-button:hover {
+    background-color: #4680A6;
+    color: #fff; /* Change background and text color on hover */
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.save-button,
+.cancel-button {
+    padding: 15px 50px; /* Increased top and bottom padding */
+    margin-top: 30px; /* Add some top margin */
+    margin-bottom: 150px; /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    background-color: #fff; /* Save button default color */
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px; /* Rounded corners */
+}
+
+.save-button {
+    background-color: #4680A6; /* Set save button color */
+    color: #fff; /* Set save button text color */
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff; /* Change background and text color on hover */
+}
+
+.edit-button:hover,
+.delete:hover {
+    color: #4680A6; /* Change color on hover */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Space above checkbox */
+}
+
+.edit-button,
+.delete {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    cursor: pointer; /* Maintain cursor for hover effect */
+    color: inherit; /* Inherit table cell text color */
+}
+
+.edit-button {
+    margin-right: 15px; /* Add space between edit and delete buttons */
+    margin-left: 15px;
+}
+
+.delete {
+    margin-left: 15px;
+}
+
+.clients-list {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders into a single border */
+    margin-top: 20px; /* Space above client list */
+}
+
+.clients-list th, .clients-list td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Border style */
+    text-align: left; /* Align text to the left */
+}
+
+.clients-list th {
+    background-color: #f4f4f4; /* Header background color */
+}
+
+/* Footer styles */
+.custom-footer {
+    margin-top: 100px; /* Space above footer */
+    width: 100%;
+    background: #F2FAFF; /* Footer background color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between footer elements */
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px; /* Footer text size */
+}
+
+.social-links img {
+    height: 24px; /* Social media icon size */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 200px; /* Adjust for the width of the fixed dashboard column */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .form-actions {
+        justify-content: center; /* Center align form actions */
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start; /* Align header items to the start */
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start; /* Align navigation items to the start */
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto; /* Adjust height */
+        border-right: none;
+        border-bottom: 1px solid #DADADA; /* Bottom border */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .management-title {
+        text-align: center; /* Center align title */
+    }
+
+    .form-group label {
+        text-align: center; /* Center align labels */
+    }
+
+    .form-actions {
+        flex-direction: column; /* Stack actions vertically */
+        align-items: center; /* Center align actions */
+    }
+
+    .save-button, .cancel-button {
+        width: 100%; /* Full width buttons */
+        text-align: center; /* Center align text */
+    }
+
+    .clients-list {
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start; /* Align header items to the start */
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start; /* Align navigation items to the start */
+    }
+
+    .user-image {
+        height: 30px; /* Reduce user image size */
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto; /* Adjust height */
+        border-right: none;
+        border-bottom: 1px solid #DADADA; /* Bottom border */
+        text-align: left; /* Left align text */
+        padding-left: 10px; /* Add padding */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .management-title {
+        text-align: center; /* Center align title */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .form-group label {
+        text-align: left; /* Left align labels */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .form-group input, .form-group select {
+        padding: 8px; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .tab-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .form-actions {
+        flex-direction: column; /* Stack actions vertically */
+        align-items: center; /* Center align actions */
+    }
+
+    .save-button, .cancel-button {
+        width: 100%; /* Full width buttons */
+        text-align: center; /* Center align text */
+    }
+
+    .clients-list {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .clients-list th, .clients-list td {
+        padding: 5px; /* Adjust padding */
+    }
+
+    .footer-text {
+        flex-direction: column; /* Stack footer text vertically */
+        align-items: center; /* Center align footer text */
+    }
+
+    .footer-text span {
+        margin-bottom: 10px; /* Add space below footer text */
+    }
+}
