@@ -1,0 +1,501 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* Basic text color */
+}
+
+button.create-order-button {
+    all: unset;
+    /* Resets all inherited styles */
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: right;
+    color: #5077AC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* Indicates it's a clickable element */
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensures the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+    /* Logo height */
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    /* Space between nav items */
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Adds horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    /* User image height */
+    border-radius: 50%;
+    /* Round user image */
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjusts space to the left of the user image */
+}
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    /* Minimum width for dropdown */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+    /* Show dropdown content */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px;
+    /* Ensure content starts below the fixed header */
+    margin-left: 200px;
+    /* Adjust for the width of the fixed dashboard column */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.clients-management {
+    margin-bottom: 40px;
+}
+
+.management-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4680A6;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 70px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 5px;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    /* Background color on hover and active state */
+    color: #fff;
+}
+
+.project-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Adjust the gap between form groups as needed */
+}
+
+.project-form .form-group {
+    flex: 1 1 calc(50% - 1rem);
+    /* Adjusting width to take half the available space minus the gap */
+    min-width: 200px;
+    /* Ensure that the fields have a minimum width */
+}
+
+.project-form .form-group label {
+    display: block;
+    /* Ensure labels are on top of their input fields */
+    margin-bottom: 0.5rem;
+    /* Add spacing between label and input */
+    color: #4680A6;
+    /* Set label color to blue */
+}
+
+.project-form .form-group input {
+    width: 60%;
+    /* Reduce input field width to 60% */
+    height: 2rem;
+    /* Increase input field height */
+    padding: 0.75rem 0.5rem;
+    /* Add padding for better appearance */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    border: 1px solid #B2B2B2;
+    /* Set border style, width, and color */
+    border-radius: 50px;
+    /* Increase border radius to create rounded corners */
+}
+
+.project-form .form-group select {
+    width: 60%;
+    /* Reduce input field width to 60% */
+    height: 2rem;
+    /* Increase input field height */
+    padding: 0.75rem 0.5rem;
+    /* Add padding for better appearance */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    border: 1px solid #B2B2B2;
+    /* Set border style, width, and color */
+    border-radius: 50px;
+    /* Increase border radius to create rounded corners */
+    appearance: none;
+    /* Remove default arrow in some browsers */
+    background-color: #fff;
+    /* Ensure the background is the same */
+    padding-right: 30px;
+    /* Add some padding to the right for the arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.save-button,
+.cancel-button {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 30px;
+    /* Add some top margin */
+    margin-bottom: 150px;
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    /* Default color */
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 50px;
+}
+
+.save-button {
+    background-color: #4680A6;
+    /* Set save button color */
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+.contact-button{
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+   
+    /* Increase bottom margin for more space */
+    border: 1px solid red;
+    background-color: #fff;
+    /* Default color */
+    color: red;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 50px;
+}
+.contact-button:hover{
+    color: #fff;
+    /* Default color */
+    background-color: red;
+}
+.edit-button:hover,
+.delete:hover {
+    color: black;
+}
+
+.edit-button,
+.cancel {
+    background-color: transparent;
+    /* Remove background color */
+    border: none;
+    /* Remove border */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+    cursor: pointer;
+    /* Maintain cursor for hover effect */
+    color: #4680A6;
+    /* Inherit table cell text color */
+}
+
+.edit-button {
+    margin-right: 15px;
+    /* Add space between edit and delete buttons */
+    margin-left: 15px;
+}
+
+.delete {
+    margin-left: 15px;
+}
+
+.clients-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.clients-list th,
+.clients-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.clients-list th {
+    background-color: #f4f4f4;
+}
+
+.custom-footer {
+    margin-top: 40px;
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 200px;
+        padding: 10px;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .management-title {
+        text-align: center;
+    }
+
+    .form-group label {
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .clients-list {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .management-title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .clients-list {
+        font-size: 12px;
+    }
+
+    .clients-list th,
+    .clients-list td {
+        padding: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}
