@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    overflow-y: auto;
 }
 
 /* Custom header styles */
@@ -23,7 +24,6 @@ body {
     align-items: center;
     padding: 0 16px;
     z-index: 1000;
-    /* Ensure the header is above other content */
 }
 
 .custom-header .logo img {
@@ -48,7 +48,6 @@ body {
     border: none;
     cursor: pointer;
     padding: 0 20px;
-    /* Add horizontal padding to create space */
 }
 
 .user-image {
@@ -63,7 +62,20 @@ body {
 /* Add margin to the user image button */
 .custom-header .user-image {
     margin-left: 20px;
-    /* Adjust this value to add more or less space */
+}
+
+/* Toggle Menu Button */
+.menu-button {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
 }
 
 /* Dashboard column styles */
@@ -101,7 +113,7 @@ body {
 .dropdown.show .dropdown-content {
     display: block;
 }
-
+/* ############################################################################################### */
 /* Dashboard column styles */
 .dashboard-column {
     position: fixed;
@@ -149,55 +161,38 @@ main {
     flex: 1;
     padding: 20px;
     margin-top: 80px;
-    /* Ensure content starts below the fixed header */
     margin-left: 200px;
-    /* Adjust for the width of the fixed dashboard column */
     overflow-y: auto;
-    /* Enable vertical scrolling for content */
     box-sizing: border-box;
-    /* Include padding and border in element's total width and height */
 }
 
 .project-form {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    /* Adjust the gap between form groups as needed */
 }
 
 .project-form .form-group {
     flex: 1 1 calc(50% - 1rem);
-    /* Adjusting width to take half the available space minus the gap */
     min-width: 200px;
-    /* Ensure that the fields have a minimum width */
 }
 
 .project-form .form-group label {
     display: block;
-    /* Ensure labels are on top of their input fields */
     margin-bottom: 0.5rem;
-    /* Add spacing between label and input */
     color: #4680A6;
-    /* Set label color to blue */
 }
 
 .project-form .form-group input {
     width: 80%;
-    /* Reduce input field width to 80% */
     padding: 0.5rem;
-    /* Add padding for better appearance */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
     border: 1px solid #B2B2B2;
-    /* Set border style, width, and color */
     border-radius: 50px;
-    /* Increase border radius to create rounded corners */
 }
-
 
 button.create-order-button {
     all: unset;
-    /* Resets all inherited styles */
     font-family: 'Inter', sans-serif;
     font-size: 21px;
     font-weight: 700;
@@ -207,7 +202,6 @@ button.create-order-button {
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
-    /* Adds pointer cursor to indicate it's a clickable element */
 }
 
 .tasks {
@@ -217,7 +211,6 @@ button.create-order-button {
 .task-header {
     display: grid;
     grid-template-columns: repeat(5, 1fr) 1fr 1fr;
-    /* 5 columns for the first part, 1fr each for Duration and Status */
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -225,7 +218,6 @@ button.create-order-button {
 .task {
     display: grid;
     grid-template-columns: repeat(5, 1fr) 1fr 1fr;
-    /* 5 columns for the first part, 1fr each for Duration and Status */
     gap: 5px;
     margin-bottom: 10px;
 }
@@ -249,23 +241,18 @@ button.create-order-button {
     text-decoration: none;
 }
 
-
 .form-actions {
     display: flex;
     gap: 10px;
 }
-
+/* ##############################################Save Button & Cancel Button################################################# */
 .save-button,
 .cancel-button {
     padding: 15px 50px;
-    /* Increased top and bottom padding */
     margin-top: 50px;
-    /* Add some top margin */
     margin-bottom: 150px;
-    /* Increase bottom margin for more space */
     border: 1px solid #4680A6;
     background-color: #fff;
-    /* Save button default color */
     color: #4680A6;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -274,20 +261,15 @@ button.create-order-button {
 
 .save-button {
     background-color: #4680A6;
-    /* Set save button color */
     color: #fff;
 }
-
 
 .cancel-button:hover {
     background-color: #4680A6;
     color: #fff;
 }
 
-
-
-
-
+/* ##############################################Save Button & Cancel Button################################################# */
 .edit-button:hover,
 .delete:hover {
     color: #4680A6;
@@ -296,29 +278,21 @@ button.create-order-button {
 .edit-button,
 .delete {
     background-color: transparent;
-    /* Remove background color */
     border: none;
-    /* Remove border */
     padding: 0;
-    /* Remove padding */
     margin: 0;
-    /* Remove margin */
     cursor: pointer;
-    /* Maintain cursor for hover effect */
     color: inherit;
-    /* Inherit table cell text color */
 }
 
 .edit-button {
     margin-right: 15px;
-    /* Add space between edit and delete buttons */
     margin-left: 15px;
 }
 
 .delete {
     margin-left: 15px;
 }
-
 
 /* Project list styles */
 .project-list table {
@@ -396,18 +370,82 @@ button.create-order-button {
 
 @media (max-width: 768px) {
     .custom-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #4680A6;
+        display: flex;
+        align-items: center;  /* This centers elements vertically */
+        padding: 0 16px;
+        z-index: 1000;
+      }
+    .custom-header nav {
+        display: none; /* Hide the menu by default */
+      }
     .custom-header nav ul {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
 
+    .custom-header nav ul li {
+        width: 100%;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+   .menu-button {
+  display: block;  /* Ensure the button is always displayed */
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;  /* Move the button to the left side */
+
+}
+
+
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: #4680A6;
+        top: 80px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+
+
+    .nav-button img {
+        display: block;
+    }
+    
+   
+    
     .dashboard-column {
         position: static;
         width: 100%;
+        margin-top: 70px;
         height: auto;
         border-right: none;
         border-bottom: 1px solid #DADADA;
@@ -416,6 +454,7 @@ button.create-order-button {
     main {
         margin-left: 0;
         padding: 10px;
+        z-index: 1;
     }
 
     .form-title {
@@ -443,6 +482,10 @@ button.create-order-button {
     .project-list table {
         font-size: 14px;
     }
+    .dropdown-content{
+        width: 280px;
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -469,7 +512,19 @@ button.create-order-button {
         text-align: left;
         padding-left: 10px;
     }
-
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
     main {
         margin-left: 0;
         padding: 10px;
@@ -514,11 +569,17 @@ button.create-order-button {
         flex-direction: column;
         align-items: center;
     }
+    .form-actions {
+        /* Existing styles... */
+        margin: 0 -10px;  /* Add negative margin to reduce space */
+      }
+      
 
     .save-button,
     .cancel-button {
         width: 100%;
         text-align: center;
+        
     }
 
     .project-list table {
@@ -532,5 +593,26 @@ button.create-order-button {
 
     .footer-text span {
         margin-bottom: 10px;
+    }
+}
+
+       /* /////additional code/////// */
+@media (max-width: 481px) {
+    .cancel-button{
+         margin-top: -150px;
+         margin-bottom: 50px;
+         width: 24%;
+         padding-left: 30px;
+    }
+    .save-button{
+        width: 24%;
+        padding-left: 30px;
+    }
+    .dropdown-content{
+        width: 280px;
+    }
+    .menu-button{
+       margin-bottom: 50px;
+       margin-top: -50px;
     }
 }
