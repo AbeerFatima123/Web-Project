@@ -13,13 +13,12 @@
         <div class="logo">
             <img src="../assets/business boss1.png" alt="Logo">
         </div>
-        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
-        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
         <nav>
             <ul>
                 <li><button class="nav-button">Orders</button></li>
                 <li class="dropdown">
-                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
+                            class="user-image"></button>
                     <div class="dropdown-content">
                         <a href="#">Register</a>
                         <a href="#">Contact Us</a>
@@ -44,32 +43,105 @@
 
         <main>
             <div class="landing-page-section">
-                <div class="landing-controls">  <button class="landing-button">Landing Page</button>
-                  <div class="landing-dropdown-content">
-                    <button class="landing-dropdown-item" id="top-bar-link">Top Bar</button>
-                    <button class="landing-dropdown-item">Course Page</button>
-                    <button class="landing-dropdown-item">Hero</button>
-                    <button class="landing-dropdown-item">Features</button>
-                    <button class="landing-dropdown-item">Discover</button>
-                    <button class="landing-dropdown-item">Screenshots</button>
-                    <button class="landing-dropdown-item">Pricing Plan</button>
-                    <button class="landing-dropdown-item">FAQ</button>
-                    <button class="landing-dropdown-item">Testimonials</button>
-                    <button class="landing-dropdown-item">Join Us</button>
-                  </div>
+                <div class="landing-controls"> <button class="landing-button">Setting </button>
+                    <div class="landing-dropdown-content">
+                        <button class="landing-dropdown-item" id="top-bar-link">Brand Setting</button>
+                        <button class="landing-dropdown-item">Course Page</button>
+                        <button class="landing-dropdown-item">Hero</button>
+                        <button class="landing-dropdown-item">Features</button>
+                        <button class="landing-dropdown-item">Discover</button>
+                        <button class="landing-dropdown-item">Screenshots</button>
+                        <button class="landing-dropdown-item">Pricing Plan</button>
+                        <button class="landing-dropdown-item">FAQ</button>
+                        <button class="landing-dropdown-item">Testimonials</button>
+                        <button class="landing-dropdown-item">Join Us</button>
+                    </div>
                 </div>
                 <div class="landing-page-form" id="top-bar-form">
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" placeholder="Type Special Offer. Don't miss it. The offer ends in 24 hours."></textarea>
-                  </div>
-                  <div class="form-actions">
-                    <button class="save-button" type="button">Save</button>
-                    <button class="cancel-button" type="button">Cancel</button>
-                  </div>
+                    <div class="brand-settings">
+                        <h2>Brand Settings</h2>
+                         <div class="logos">
+                            <div class="logo-upload">
+                                <label for="logo-dark">Logo Dark</label>
+                                <img src="../assets/business boss1.png" alt="Logo Dark" id="logo-dark">
+                                <button class="upload-btn">Choose file</button>
+                            </div>
+                            <div class="logo-upload">
+                                <label for="logo-light">Logo Light</label>
+                                <img src="../assets/business boss1.png" alt="Logo Light" id="logo-light">
+                                <button class="upload-btn">Choose file</button>
+                            </div>
+                            <div class="logo-upload">
+                                <label for="favicon">Favicon</label>
+                                <img src="../assets/business boss1.png" alt="Favicon" id="favicon">
+                                <button class="upload-btn">Choose file</button>
+                            </div>
+                        </div>
+                        <div class="text-fields">
+                            <div class="field">
+                                <label for="title-text">Title Text</label>
+                                <input type="text" id="title-text" value="Powered By BB Pro">
+                            </div>
+                            <div class="field">
+                                <label for="footer-text">Footer Text</label>
+                                <input type="text" id="footer-text" value="Powered By BB Pro">
+                            </div>
+                            <div class="field">
+                                <label for="default-language">Default Language</label>
+                                <select id="default-language">
+                                    <option>English</option>
+                                    <!-- Add other options as needed -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="switches">
+                            <div class="switch">
+                                <label for="rtl-switch">Enable RTL</label>
+                                <input type="checkbox" id="rtl-switch">
+                            </div>
+                            <div class="switch">
+                                <label for="landing-page-switch">Enable Landing Page</label>
+                                <input type="checkbox" id="landing-page-switch" checked>
+                            </div>
+                            <div class="switch">
+                                <label for="signup-switch">Enable Sign-up Page</label>
+                                <input type="checkbox" id="signup-switch" checked>
+                            </div>
+                            <div class="switch">
+                                <label for="email-verification-switch">Email Verification</label>
+                                <input type="checkbox" id="email-verification-switch">
+                            </div>
+                        </div>
+                        
+                        <div class="customizer">
+                            <h3>Theme Customizer</h3>
+                            <div class="color-settings">
+                                <label>Primary color settings</label>
+                                <div class="colors">
+                                    <span class="color" style="background-color: #f00;"></span>
+                                    <span class="color" style="background-color: #0f0;"></span>
+                                    <span class="color" style="background-color: #00f;"></span>
+                                    <!-- Add more color options as needed -->
+                                </div>
+                            </div>
+                            <div class="layout-settings">
+                                <label>Sidebar settings</label>
+                                <input type="checkbox"> Transparent layout
+                            </div>
+                            <div class="layout-settings">
+                                <label>Layout settings</label>
+                                <input type="checkbox"> Dark layout
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="save-button" type="button">Save</button>
+                        <button class="cancel-button" type="button">Cancel</button>
+                    </div>
                 </div>
-              </div>
-              
+            </div>
+
         </main>
     </div>
 
@@ -86,7 +158,8 @@
         </div>
     </footer>
 
-    <script src="../utilis/superAdmin_landing_Page.js"></script>
+    <script src="../utilis/settings.js"></script>
+    
 </body>
 
 </html>
