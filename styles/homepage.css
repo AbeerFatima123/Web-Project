@@ -1,0 +1,551 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    /* Set width */
+    margin: 0 auto;
+    /* Center align horizontally */
+    max-width: 1200px;
+    /* Set max width */
+}
+
+/* Header Styles */
+header {
+    background: #4680A6;
+    /* Background color */
+    padding: 1rem 0;
+    /* Padding */
+}
+
+header .container {
+    display: flex;
+    /* Flex container */
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Center vertically */
+}
+
+header .logo img {
+    height: 40px;
+    /* Logo height */
+}
+
+header nav ul {
+    list-style: none;
+    /* Remove list styles */
+    display: flex;
+    /* Flex container */
+    gap: 1rem;
+    /* Gap between items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Text color */
+}
+
+/* Custom Button Styles */
+.custom-button {
+    background-color: transparent;
+    /* Transparent background */
+    color: #B9DEFF;
+    /* Text color */
+    border: none;
+    /* No border */
+    padding: 10px;
+    /* Padding */
+    cursor: pointer;
+    /* Pointer cursor */
+    font: inherit;
+    /* Inherit font */
+    border-radius: 5px;
+    /* Border radius */
+    outline: none;
+    /* Remove outline */
+}
+
+.custom-button1 {
+    background-color: transparent;
+    /* Transparent background */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    padding: 10px;
+    /* Padding */
+    cursor: pointer;
+    /* Pointer cursor */
+    font: inherit;
+    /* Inherit font */
+    border-radius: 5px;
+    /* Border radius */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Login Button Styles */
+.login-btn {
+    padding: 0.5rem 1rem;
+    /* Padding */
+    border: 1px solid white;
+    /* Border */
+    border-radius: 50px;
+    /* Border radius */
+    text-decoration: none;
+    /* Text decoration */
+    background: none;
+    /* Transparent background */
+    color: white;
+    /* Text color */
+}
+
+/* Signup Button Styles */
+.signup-btn {
+    padding: 0.5rem 1rem;
+    /* Padding */
+    border: 1px solid white;
+    /* Border */
+    border-radius: 50px;
+    /* Border radius */
+    text-decoration: none;
+    /* Text decoration */
+    background: white;
+    /* Background color */
+    color: #4680A6;
+    /* Text color */
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; /* Adjust the font size as needed */
+    z-index: 1;
+}
+
+.img {
+    position: relative;
+}
+
+.img label:nth-of-type(1) {
+    top: 20px; /* Adjust the positioning as needed */
+}
+
+.img label:nth-of-type(2) {
+    top: 60px; /* Adjust the positioning as needed */
+}
+
+.top_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.side-images {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+.left-side{
+    margin-left: 200px;
+}
+.right-side{
+    margin-right: 200px;
+}
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Adjusted to reduce the gap */
+}
+
+.left-side .orders, .left-side .revenue, .right-side .task, .right-side .reminder {
+    margin: 5px 0; /* Reduced the margin */
+}
+
+.left-side img, .right-side img {
+    width: auto;
+    height: auto;
+}
+
+
+.manage {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px; /* Adjust the max-width as needed */
+}
+
+.manage-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.manage-label {
+    color: #4680A6;
+    font-weight: bold;
+    font-size: 34px; /* Adjust the font size as needed */
+    margin: 0 20px; /* Add some horizontal spacing */
+}
+
+.boy-img, .design-img {
+    width: 250px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.Get_Free_btn {
+    background-color: #4680A6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Optional: adds rounded corners */
+    margin-top: 20px;
+}
+
+.Get_Free_btn:hover {
+    color:#4680A6; /* Optional: add hover effect */
+    background-color: white;
+    border: 1px solid #4680A6;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #e9ecef;
+}
+
+.features {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.features h2 {
+    color: #4680A6;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    background: #f0f6fc;
+    padding: 20px;
+    border-radius: 20px;
+    width: calc(33.333% - 20px); /* Subtract the gap to fit three items in one row */
+    min-width: 200px;
+    border: 1px solid #4680A6;
+    box-shadow: 0px 0px 10px 4px #4680A633;
+    box-sizing: border-box;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    color: #4680A6;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.feature p {
+    color: #333333;
+    font-size: 16px;
+}
+
+.textBlock {
+    background-color: #4680A6;
+    padding: 100px;
+    color: white;
+    text-align: left;
+    width: 100%; /* Make sure the div takes the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.textBlock-label, .textBlock-description {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.textBlock-label {
+    font-weight: bold;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.textBlock-description {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+
+
+.textBlock1 {
+    margin-top: 50px;
+    background: #f0f6fc;
+    padding: 100px;
+    color: #4680A6;
+    text-align: left;
+    width: 100%; /* Make sure the div takes the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.textBlock1-label, .textBlock1-description {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.textBlock1-label {
+    font-weight: bold;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.textBlock1-description {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.Get_Free_btn2 {
+    background-color: white;
+    color: #4680A6;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Optional: adds rounded corners */
+    display: block; /* Ensure the button is on a new line */
+    margin-top: 20px; /* Add some spacing at the top */
+}
+
+.Get_Free_btn2:hover {
+    background-color: #4680A6;
+    border: 1px solid white;
+    color: white; 
+    
+}
+
+
+
+.image-bullets {
+    list-style-type: none;
+    /* Remove default bullets */
+    list-style-image: url("check.png");
+    /* Set the bullet image URL */
+    margin-left: 50px;
+
+}
+.pricing-plans {
+    display: flex;
+    justify-content: space-between; /* Add space between the plan details and image */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add gap between the elements */
+}
+
+
+
+.plan {
+    color: #4680A6;
+    margin-top: 20px;
+    margin-left: 60px;
+    text-align: left;
+    background: #f0f4f8;
+  
+    border: 1px solid #4680A6;
+    box-shadow: 0px 0px 10px 4px #4680A633;
+}
+
+.plan h1 {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.plan p {
+   text-align: center;
+}
+.pricing {
+    padding: 50px 20px;
+    background: transparent;
+    text-align: center;
+}
+.pricing h1{
+    color: #4680A6;
+    font-size: 45px;
+    font-weight: bold;
+}
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plan {
+    background: #f1f5fa;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    min-width: 200px;
+}
+
+.faq {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.testimonials {
+    padding: 50px 20px;
+    background: #e9ecef;
+    text-align: center;
+}
+
+.testimonial {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+}
+
+.contact {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+footer {
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.contact h2{
+    color: #4680A6;
+    font-size: 45px;
+    font-weight: bold;
+}
+.submmit-button{
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 50px;
+   
+    /* Add some top margin */
+    margin-bottom: 50px;
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    color: #fff;
+    /* Save button default color */
+    background-color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.upgrade-button {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 50px;
+    margin-left: 100px;
+    /* Add some top margin */
+    margin-bottom: 50px;
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    color: #fff;
+    /* Save button default color */
+    background-color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.upgrade-button:hover {
+    background-color: #fff;
+    /* Save button default color */
+    color: #4680A6;
+    border: 1px solid #4680A6;
+}
+
+
+/* Footer */
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
