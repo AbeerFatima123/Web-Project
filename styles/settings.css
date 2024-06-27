@@ -64,19 +64,6 @@ body {
 .custom-header .user-image {
     margin-left: 20px;
 }
-/* Toggle Menu Button */
-.menu-button {
-    display: none;
-    font-size: 30px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#menu-toggle {
-    display: none;
-}
 
 .container {
     display: flex;
@@ -163,6 +150,84 @@ main {
     overflow-y: auto;
     box-sizing: border-box;
 }
+/* styles/settings.css */
+
+/* styles/settings.css */
+
+.logo-upload {
+    display: inline-block; /* Display horizontally */
+    width: 200px; /* Adjust width as needed */
+    text-align: center; /* Center align content */
+    margin-right: 20px; /* Add space between logo-upload divs */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    padding: 10px; /* Add padding */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.logo-upload img {
+    max-width: 100px; /* Adjust image size */
+    margin-bottom: 10px;
+}
+
+.logo-upload label {
+    display: block; /* Display labels as block */
+    margin-bottom: 5px; /* Add space between label and image */
+    font-weight: bold; /* Make label text bold */
+}
+
+.upload-btn {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    color: #4680A6;
+    background-color: white;
+    border: 1px solid #4680A6;
+}
+/* styles/settings.css */
+/* styles/settings.css */
+
+.text-fields {
+    display: flex; /* Display fields horizontally */
+    gap: 10px; /* Reduce space between fields */
+}
+
+.field {
+    flex: 1; /* Each field takes equal space */
+    display: flex; /* Display flex for aligning label and input/select */
+    flex-direction: column; /* Stack label on top of input/select */
+    margin-top: 30px;
+}
+
+.field label {
+    margin-bottom: 5px; /* Add space between label and input/select */
+    font-weight: bold; /* Make label text bold */
+}
+
+.field input[type="text"],
+.field select {
+    width: calc(100% - 20px); /* Adjust width to be less than full */
+    padding: 8px; /* Padding for input/select */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease; /* Transition for better user experience */
+}
+
+.field input[type="text"]:focus,
+.field select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Highlight border color on focus */
+}
 
 .landing-page-section {
     margin-bottom: 40px;
@@ -193,6 +258,76 @@ main {
 .dropdown-landing {
     position: relative;
     display: inline-block;
+}
+/* styles/settings.css */
+
+.switches {
+    display: flex; /* Display switches horizontally */
+    gap: 20px; /* Space between switches */
+    margin-top: 30px;
+}
+
+.switch {
+    display: flex; /* Align label and input horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+.switch input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+.switch label {
+    font-weight: bold; /* Make label text bold */
+}
+
+.switch input[type="checkbox"]:checked {
+    background-color: #007bff; /* Blue background for checked state */
+}
+/* styles/settings.css */
+
+.customizer {
+    display: flex; /* Align elements horizontally */
+    flex-wrap: wrap; /* Allow elements to wrap if necessary */
+    gap: 20px; /* Space between elements */
+    margin-top: 30px;
+}
+
+.color-settings {
+    flex: 1; /* Take full width available */
+}
+
+.colors {
+    display: flex; /* Align color options horizontally */
+    gap: 10px; /* Space between color options */
+}
+
+.color {
+    display: inline-block;
+    width: 30px; /* Adjust color swatch size */
+    height: 30px;
+    border-radius: 50%; /* Rounded shape */
+    border: 2px solid transparent; /* Transparent border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.color:hover {
+    border-color: #333; /* Dark border color on hover */
+}
+
+.layout-settings {
+    flex: 1; /* Take full width available */
+  
+}
+
+.layout-settings input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and text */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.layout-settings label {
+    font-weight: bold; /* Make label text bold */
+    cursor: pointer; /* Change cursor on hover */
+    
 }
 
 .landing-button {
@@ -262,22 +397,25 @@ main {
     display: flex;
     gap: 10px;
 }
-
+.save-button{  margin-left: 1000px;
+  }
 .save-button,
 .cancel-button {
     padding: 10px 20px;
     border: 1px solid #4680A6;
-    background-color: #fff;
-    color: #4680A6;
+   color: #fff;
+   background-color: #4680A6;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 5px;
+  
 }
 
 .save-button:hover,
 .cancel-button:hover {
-    background-color: #4680A6;
-    color: #fff;
+    color: #4680A6;
+    background-color: #fff;
+    border: 1px solid #4680A6;
 }
 
 .custom-footer {
@@ -323,10 +461,6 @@ main {
         border-right: none;
         border-bottom: 1px solid #DADADA;
     }
-    .task-header,
-    .task {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
     main {
         margin-left: 0;
@@ -345,77 +479,6 @@ main {
 }
 
 @media (max-width: 768px) {
-    .custom-header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 80px;
-        background-color: #4680A6;
-        display: flex;
-        align-items: center;  /* This centers elements vertically */
-        padding: 0 16px;
-        z-index: 1000;
-      }
-    .custom-header nav {
-        display: none; /* Hide the menu by default */
-      }
-    .custom-header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .custom-header nav ul li {
-        width: 100%;
-    }
-    .dropdown-content {
-        display: block;
-        position: absolute;
-        left: 0;
-        background-color: white;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        min-width: 160px;
-    }
-    .dropdown.show  {
-      
-        width: 80%;
-    }
-   .menu-button {
-  display: block;  /* Ensure the button is always displayed */
-  font-size: 30px;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: auto;  /* Move the button to the left side */
-
-}
-
-
-    #menu-toggle:checked + .menu-button + nav {
-        display: block;
-        position: absolute;
-        background: #4680A6;
-        top: 80px;
-        width: 100%;
-        left: 0;
-        text-align: center;
-    }
-
-    #menu-toggle:checked + .menu-button + nav ul {
-        flex-direction: column;
-    }
-
-    #menu-toggle:checked + .menu-button + nav ul li {
-        margin: 1rem 0;
-    }
-
-
-    .nav-button img {
-        display: block;
-    }
-    
     .dashboard-column {
         width: 100%;
         height: auto;
@@ -449,10 +512,6 @@ main {
         align-items: center;
         gap: 10px;
     }
-    .dropdown-content{
-        width: 280px;
-        align-items: center;
-    }
 }
 
 @media (max-width: 480px) {
@@ -469,19 +528,6 @@ main {
         padding-left: 10px;
     }
 
-    .dropdown-content {
-        display: block;
-        position: absolute;
-        left: 0;
-        background-color: white;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        min-width: 160px;
-    }
-    .dropdown.show  {
-      
-        width: 80%;
-    }
     main {
         width: 100%;
         padding: 10px;
@@ -520,21 +566,5 @@ main {
 
     .footer-text span {
         margin-bottom: 10px;
-    }
-}
-@media (max-width: 481px) {
-    
-    .dropdown-content{
-        width: 280px;
-    }
-    .menu-button{
-       margin-bottom: 50px;
-       margin-top: -50px;
-    }
-}
-@media (max-width: 768px) {
-    .custom-header .logo {
-        margin-right: auto; /* Pushes everything else to the opposite side */
-        padding-left: 5px; /* Adds some padding to ensure it doesn't touch the screen edge */
     }
 }
