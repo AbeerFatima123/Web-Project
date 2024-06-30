@@ -179,35 +179,30 @@ main {
 }
 .tab-buttons {
     display: flex;
-    gap: 150px;
+    gap: 100px;
     margin-bottom: 20px;
-    /* Space below tab buttons */
 }
 
 .tab-button {
-    padding: 10px 70px;
+    padding: 10px 50px;
     /* Increased horizontal padding */
     min-width: 120px;
     /* Set a minimum width */
     border: 1px solid #4680A6;
-    /* Border style */
     background-color: #fff;
-    /* Background color */
     color: #4680A6;
-    /* Text color */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px;
-    /* Rounded corners */
+    /* Smooth transition */
+    border-radius: 10px;
 }
 
 .tab-button.active,
 .tab-button:hover {
     background-color: #4680A6;
+    /* Background color on hover and active state */
     color: #fff;
-    /* Change background and text color on hover or active state */
 }
-
 
 button.create-order-button {
     all: unset;
@@ -355,12 +350,13 @@ button.create-order-button {
     position: relative;
     background-color: #fff;
     margin-right: 8px; /* Space between radio button and label text */
+    margin-left: 30px;
 }
 
 /* Style for the checked state */
 .radio-color:checked {
     background-color: #4680A6;
-    border: 10px solid #4680A6;
+
 }
 
 /* Custom checkmark (optional) */

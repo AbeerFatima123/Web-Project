@@ -610,3 +610,143 @@ footer .social-links img {
     color: #fff;
     /* Text color */
 }
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hide the nav by default */
+    header nav {
+        display: none;
+    }
+
+    /* Show the navbar when the checkbox is checked */
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: rgba(70, 128, 166, 1);
+        top: 80px;
+        width: 100%;
+        left: 0;
+        z-index: 1000; /* Ensure navbar appears above other content */
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+    /* Updated header styles */
+    header {
+    width: 100%;
+    background: #4680A6;
+    padding: 1rem 0;
+}
+
+/* Updated footer styles */
+footer {
+    width: 100%;
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+}
+
+@media (min-width: 769px) {
+    /* Hide the menu button and show nav normally */
+    .menu-button {
+        display: none;
+    }
+    /* Ensure the menu toggle checkbox is hidden */
+    #menu-toggle {
+        display: none;
+    }
+    /* Show the header navigation */
+    header nav {
+        display: flex;
+    }
+    * Updated header styles */
+    header {
+    width: 100%;
+    background: #4680A6;
+    padding: 1rem 0;
+}
+
+/* Updated footer styles */
+footer {
+    width: 100%;
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+}
+@media (max-width:480px) {
+    main {
+        flex-direction: column;
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hide the nav by default */
+    header nav {
+        display: none;
+    }
+
+    /* Show the navbar when the checkbox is checked */
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: rgba(70, 128, 166, 1);
+        top: 80px;
+        width: 100%;
+        left: 0;
+        z-index: 1000; /* Ensure navbar appears above other content */
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+    /* Updated header styles */
+    header {
+    /* width: 100%; */
+    background: #4680A6;
+    padding: 2rem 0;
+}
+
+/* Updated footer styles */
+footer {
+    width: 100%;
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+header {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+}
+    
+}
