@@ -61,11 +61,18 @@ app.get('/dashboard_clients', (req, res) => {
     res.sendFile('/pages/client page.html', { root: __dirname });
 });
 
+app.get('/dashboard_clients_type', (req, res) => {
+    res.sendFile('/pages/client type page.html', { root: __dirname });
+});
+
 // orders
 app.get('/dashboard_orders', (req, res) => {
     res.sendFile('/pages/orders Page.html', { root: __dirname });
 });
 
+app.get('/dashboard_invoice', (req, res) => {
+    res.sendFile('/pages/orders_and_invoices.html', { root: __dirname });
+});
 // notifications
 app.get('/dashboard_notifications', (req, res) => {
     res.sendFile('/pages/Notifications Page.html', { root: __dirname });
