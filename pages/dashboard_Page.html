@@ -33,13 +33,15 @@
 
     <div class="container">
         <div class="dashboard-column">
-            <h2 class="dashboard-heading">Dashboard</h2>
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
             <div class="dashboard-links">
-                <button class="dashboard-button active">Set Up</button>
-                <button class="dashboard-button">Projects</button>
-                <button class="dashboard-button">Clients</button>
-                <button class="dashboard-button">Orders & Invoices</button>
-                <button class="dashboard-button">Notifications</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
             </div>
         </div>
 
@@ -53,7 +55,7 @@
                 <li><a href="#">Last 30 Days</a></li>
                 <li><a href="#">Select Dates</a></li>
             </ul>
-            
+
 
             <div class="analytics-overview">
                 <div class="analytics-item">
@@ -64,9 +66,9 @@
                 <div class="analytics-item">
                     <p>New Members</p>
                     <h2>2</h2>
-                    
+
                 </div>
-              
+
                 <div class="analytics-item">
                     <p>Members on Paid Plan</p>
                     <h2>4</h2>
@@ -79,10 +81,10 @@
                     <p>Revenue</p>
                     <h2>$128,7K</h2>
                 </div>
-                
+
             </div>
 <br><br><br><br>
-            
+
             <div class="charts">
                 <div class="chart-item">
                     <h4>Order Breakdown</h4>
@@ -101,7 +103,7 @@
                     <img src="../assets/chart4.png" alt="Popular Times">
                 </div>
             </div>
-            
+
         </main>
     </div>
 
@@ -118,8 +120,8 @@
             <img src="../assets/logos Group.png" alt="Social Icons">
         </div>
     </footer>
-
-    <script src="../utilis/drop_down.js"></script>
     <script src="../utilis/dashboard.js"></script>
+    <script src="../utilis/drop_down.js"></script>
+
 </body>
 </html>

@@ -34,18 +34,19 @@
     </header>
 
     <div class="dashboard-column">
-        <h2 class="dashboard-heading">Dashboard</h2>
+        <a href="/dashboard">
+            <h2 class="dashboard-heading">Dashboard</h2>
+        </a>
         <div class="dashboard-links">
-            <button class="dashboard-button">Projects</button> <!-- Dashboard button for Projects -->
-            <button class="dashboard-button">Clients</button> <!-- Dashboard button for Clients -->
-            <button class="dashboard-button">Orders & Invoices</button> <!-- Dashboard button for Orders & Invoices -->
-            <button class="dashboard-button">Notifications</button> <!-- Dashboard button for Notifications -->
-            <button class="dashboard-button active">Setup</button> <!-- Active dashboard button for Setup -->
+            <button class="dashboard-button active" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
         </div>
     </div>
 
     <main>
-       
         <div class="setup-container">
             <div class="setup-heading">
                 <h3 class="setup-title">Set Up</h3> <!-- Setup page title -->
@@ -53,8 +54,8 @@
 
             <div class="tab-buttons">
                 <button class="tab-button active">Shop Setup</button> <!-- Active tab button for Shop Setup -->
-                <button class="tab-button">Integration</button> <!-- Tab button for Integration -->
-                <button class="tab-button">Team Members</button> <!-- Tab button for Team Members -->
+                <button class="tab-button" onclick="window.location.href='/dashboard_shopSetup_integration'">Integration</button> <!-- Tab button for Integration -->
+                <button class="tab-button" onclick="window.location.href='/dashboard_shopSetup_team'">Team Members</button> <!-- Tab button for Team Members -->
             </div>
 
             <div class="form-container">
@@ -64,7 +65,7 @@
                         <button class="upload-button">Upload Photo</button> <!-- Button to upload photo -->
                     </div>
                 </div>
-                
+
                 <!-- Form inputs for business setup -->
                 <div class="form-group">
                     <label for="business-name">Business Name</label>

@@ -35,13 +35,15 @@
 
     <div class="container">
         <div class="dashboard-column">
-            <h2 class="dashboard-heading">Dashboard</h2>
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
             <div class="dashboard-links">
-                <button class="dashboard-button">Set Up</button> <!-- Dashboard button for Set Up -->
-                <button class="dashboard-button">Projects</button> <!-- Dashboard button for Projects -->
-                <button class="dashboard-button">Clients</button> <!-- Dashboard button for Clients -->
-                <button class="dashboard-button active">Orders & Invoices</button> <!-- Active dashboard button for Orders & Invoices -->
-                <button class="dashboard-button">Notifications</button> <!-- Dashboard button for Notifications -->
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button active" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
             </div>
         </div>
 

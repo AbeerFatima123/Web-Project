@@ -38,13 +38,15 @@
 
     <!-- Sidebar for dashboard navigation -->
     <div class="dashboard-column">
-        <h2 class="dashboard-heading">Dashboard</h2>
+        <a href="/dashboard">
+            <h2 class="dashboard-heading">Dashboard</h2>
+        </a>
         <div class="dashboard-links">
-            <button class="dashboard-button">Set Up</button>
-            <button class="dashboard-button active">Clients</button>
-            <button class="dashboard-button">Projects</button>
-            <button class="dashboard-button">Orders & Invoices</button>
-            <button class="dashboard-button">Notifications</button>
+            <button class="dashboard-button active" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
         </div>
     </div>
 
@@ -53,7 +55,6 @@
         <div class="clients-management">
             <h3 class="management-title">Add Team Member</h3>
             <!-- Tab buttons for Clients and Clients Type -->
-         
             <!-- Form for adding or editing client information -->
             <div class="project-form">
                 <div class="form-group">
