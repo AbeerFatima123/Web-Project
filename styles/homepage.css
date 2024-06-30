@@ -38,6 +38,49 @@ header {
     z-index: 1000; */
 }
 
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    height: 46px;
+    padding: 13px 16.8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
+}
+
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    height: 46px;
+    padding: 13px 16.8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
+}
+.input{
+    height: 120px;
+}
+.input:focus {
+    border-color: #4680A6;
+    outline: none;
+  
+}
 header .container {
     display: flex;
     /* Flex container */

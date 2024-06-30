@@ -226,12 +226,12 @@ main {
 
 .tab-buttons {
     display: flex;
-    gap: 200px;
+    gap: 100px;
     margin-bottom: 20px;
 }
 
 .tab-button {
-    padding: 10px 70px;
+    padding: 10px 50px;
     /* Increased horizontal padding */
     min-width: 120px;
     /* Set a minimum width */
@@ -240,15 +240,16 @@ main {
     color: #4680A6;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px;
+    /* Smooth transition */
+    border-radius: 10px;
 }
 
 .tab-button.active,
 .tab-button:hover {
     background-color: #4680A6;
+    /* Background color on hover and active state */
     color: #fff;
 }
-
 .sub-title {
     margin-bottom: 10px;
     color: #4680A6;

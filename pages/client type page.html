@@ -50,17 +50,17 @@
     <!-- Main Content Section -->
     <main>
         <div class="clients-management">
-            <h3 class="management-title">Client's Management</h3> <!-- Section Title -->
+            <h3 class="management-title">Client's Management</h3>
             <div class="tab-buttons">
-                <!-- Tab Buttons -->
                 <button class="tab-button">Clients</button>
                 <button class="tab-button active">Clients Type</button>
             </div>
+            <button class="create-order-button">+ Add Client Type</button> <!-- Button to create a new order -->
+
             <div class="project-form">
-                <!-- Form for Client Type -->
                 <div class="form-group">
                     <label for="client-number">Client Type Name *</label>
-                    <input type="tel" id="client-number" name="client-number" placeholder="Client's Number">
+                    <input type="tel" id="client-number" name="client-number" placeholder="Client's Number" class="second_input">
                 </div>
                 <div class="form-group">
                     <label for="client-type">Assign To Clients</label>
@@ -68,6 +68,7 @@
                         <option value="choose">Choose</option>
                     </select>
                 </div>
+            </div>
             </div>
             <div class="form-actions">
                 <!-- Form Action Buttons -->

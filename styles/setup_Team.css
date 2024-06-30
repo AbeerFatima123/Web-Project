@@ -200,65 +200,48 @@ main {
     color: #4680A6;
     /* Title color */
 }
-
 .project-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    /* Adjust the gap between form groups as needed */
+    gap: 0px; /* No additional gap */
 }
 
-.project-form .form-group {
-    flex: 1 1 calc(50% - 1rem);
-    /* Adjusting width to take half the available space minus the gap */
-    min-width: 200px;
-    /* Ensure that the fields have a minimum width */
+.form-group {
+    flex: 1 0 40%;
+    min-width: 150px;
+    margin-right: 10px; /* Adjust the space between groups */
+    margin-top: 30px;
 }
 
-.project-form .form-group label {
-    display: block;
-    /* Ensure labels are on top of their input fields */
-    margin-bottom: 0.5rem;
-    /* Add spacing between label and input */
+.form-group:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.form-group label {
     color: #4680A6;
-    /* Set label color to blue */
+    margin-bottom: 5px;
+    display: block;
 }
 
-.project-form .form-group input {
-    width: 80%;
-    /* Reduce input field width to 80% */
-    padding: 0.5rem;
-    /* Add padding for better appearance */
+input[type="text"],
+input[type="tel"],
+select {
+    width: 60%;
+    height: 36px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    border: 1px solid #B2B2B2;
-    /* Set border style, width, and color */
-    border-radius: 50px;
-    /* Increase border radius to create rounded corners */
+    margin-right: 10px; /* Reduced margin between inputs */
 }
 
-.project-form .form-group select {
-    width: 80%;
-    /* Reduce input field width to 80% */
-    padding: 0.5rem;
-    /* Add padding for better appearance */
-    box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    border: 1px solid #B2B2B2;
-    /* Set border style, width, and color */
-    border-radius: 50px;
-    /* Increase border radius to create rounded corners */
-    appearance: none;
-    /* Remove default arrow in some browsers */
-    background-color: #fff;
-    /* Ensure the background is the same */
-    padding-right: 30px;
-    /* Add some padding to the right for the arrow */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    /* Custom dropdown arrow */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
 }
+
 
 .create-order-button {
     display: flex;
@@ -315,7 +298,9 @@ main {
     border-radius: 50px;
     /* Rounded corners */
 }
-
+.cancel-button {
+    margin-left: 30px;
+}
 .save-button {
     background-color: #4680A6;
     /* Set save button color */
@@ -691,10 +676,29 @@ main {
     .dropdown-content{
         width: 280px;
     }
-    .menu-button{
-       margin-bottom: 50px;
-       margin-top: -50px;
-    }
+    
+    .cancel-button{
+        margin-top: -150px;
+        margin-bottom: 50px;
+        width: 50%;
+        padding-left: 51px;
+        margin-left: 0px; /* Move the button to the left */
+       
+       align-items: center;
+   }
+   .save-button{
+       width: 50%;
+       padding-left: 51px;
+   }
+   .menu-button{
+    margin-bottom: 50px;
+    margin-top: -100px;
+ }
+ .logo{
+     margin-bottom: 50px;
+    margin-top: 10px;
+ }
+
 }
 @media (max-width: 768px) {
     .custom-header .logo {

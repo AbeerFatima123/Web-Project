@@ -52,11 +52,15 @@
     <main>
         <div class="clients-management">
             <h3 class="management-title">Clients Management</h3>
+
+            
             <!-- Tab buttons for Clients and Clients Type -->
             <div class="tab-buttons">
                 <button class="tab-button active">Clients</button>
                 <button class="tab-button">Clients Type</button>
             </div>
+            <button class="create-order-button">+ Add Client</button> <!-- Button to create a new order -->
+
             <!-- Form for adding or editing client information -->
             <div class="project-form">
                 <div class="form-group">
@@ -80,12 +84,14 @@
                 
                 <!-- Button to create an order for the client -->
                 <div class="button-container">
-                    <button class="create-order-button">Create Order for this Client</button>
+                    <button class="create-order-button1">Create Order for this Client</button>
                 </div>
                 <!-- Checkbox for client permission to create a Business Pro account -->
                 <div class="form-group">
+                    <br><br>
                     <input type="checkbox" id="client-permission" name="client-permission">
-                    <label for="client-permission">This Client has given me permission to create a Business Pro account on their behalf.</label>
+                
+                    <label for="client-permission" style="color: rgb(93, 91, 91);">This Client has given me permission to create a Business Pro account on their behalf.</label>
                 </div>
             </div>
         </div>
@@ -99,17 +105,7 @@
         <!-- Section displaying a list of clients -->
         <h3 class="clients-list-title" style="color: #4680A6;">Clients</h3>
         <table class="clients-list">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Telephone</th>
-                    <th>Orders</th>
-                    <th>Type</th>
-                    <th>Revenue</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
+           
             <tbody>
                 <!-- Example rows for clients, replace with dynamic content -->
                 <tr>

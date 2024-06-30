@@ -36,6 +36,22 @@ body {
     gap: 1rem; /* Space between navigation items */
 }
 
+button.create-order-button {
+    all: unset;
+    /* Resets all inherited styles */
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: right;
+    color: #5077AC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* Adds pointer cursor to indicate it's a clickable element */
+}
+
+
 .custom-header nav ul li {
     display: flex;
 }
@@ -174,67 +190,152 @@ main {
     color: #4680A6; /* Title color */
 }
 
+
 .tab-buttons {
     display: flex;
-    gap: 200px;
-    margin-bottom: 20px; /* Space below tab buttons */
+    gap: 100px;
+    margin-bottom: 20px;
 }
 
 .tab-button {
-    padding: 10px 70px; /* Increased horizontal padding */
-    min-width: 120px; /* Set a minimum width */
-    border: 1px solid #4680A6; /* Border style */
-    background-color: #fff; /* Background color */
-    color: #4680A6; /* Text color */
+    padding: 10px 50px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px; /* Rounded corners */
+    /* Smooth transition */
+    border-radius: 10px;
 }
 
 .tab-button.active,
 .tab-button:hover {
     background-color: #4680A6;
-    color: #fff; /* Change background and text color on hover or active state */
+    /* Background color on hover and active state */
+    color: #fff;
 }
-
 .project-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Adjust the gap between form groups as needed */
+    gap: 20px;
 }
 
-.project-form .form-group {
-    flex: 1 1 calc(50% - 1rem); /* Adjusting width to take half the available space minus the gap */
-    min-width: 200px; /* Ensure that the fields have a minimum width */
+.form-group {
+    flex: 1 0 30%; /* Allows three fields per line */
+    min-width: 200px;
 }
 
-.project-form .form-group label {
-    display: block; /* Ensure labels are on top of their input fields */
-    margin-bottom: 0.5rem; /* Add spacing between label and input */
-    color: #4680A6; /* Set label color to blue */
+.form-group label{
+   color: #4680A6;
 }
 
-.project-form .form-group input {
-    width: 80%; /* Reduce input field width to 80% */
-    padding: 0.5rem; /* Add padding for better appearance */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    border: 1px solid #B2B2B2; /* Set border style, width, and color */
-    border-radius: 50px; /* Increase border radius to create rounded corners */
+.form-group:nth-child(4) {
+    flex: 0 0 32%; /* Reduced width for the fourth input */
 }
 
-.project-form .form-group select {
-    width: 80%; /* Reduce input field width to 80% */
-    padding: 0.5rem; /* Add padding for better appearance */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    border: 1px solid #B2B2B2; /* Set border style, width, and color */
-    border-radius: 50px; /* Increase border radius to create rounded corners */
-    appearance: none; /* Remove default arrow in some browsers */
-    background-color: #fff; /* Ensure the background is the same */
-    padding-right: 30px; /* Add some padding to the right for the arrow */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom dropdown arrow */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
+.button-container {
+    flex: 0 0 35%; /* Width for the button container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Align with the fourth input */
 }
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    height: 46px;
+    padding: 13px 16.8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
+}
+
+.label {
+    color: #4680A6;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.create-order-button1 {
+    padding: 22px 5px;
+    background-color: white;
+    color: #4680A6;
+    border: 1px solid #4680A6;
+    border-radius: 8px;
+    margin-right: 200px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.create-order-button1:hover {
+color: white;
+background-color: #4680A6;
+}
+
+.checkbox-container {
+    flex: 1 0 100%;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    white-space: nowrap;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Style for the checked state */
+input[type="checkbox"]:checked {
+    background-color: #4680A6;
+    border: 1px solid #4680A6;
+}
+
+/* Add a checkmark (optional) */
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.create-order-button {
+    padding: 10px 20px;
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 
 .create-order-button {
     display: flex;
@@ -248,10 +349,6 @@ main {
     border-radius: 50px; /* Rounded corners */
 }
 
-.create-order-button:hover {
-    background-color: #4680A6;
-    color: #fff; /* Change background and text color on hover */
-}
 
 .form-actions {
     display: flex;
@@ -269,8 +366,11 @@ main {
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 50px; /* Rounded corners */
+    
 }
-
+.cancel-button{
+    margin-left: 50px;
+}
 .save-button {
     background-color: #4680A6; /* Set save button color */
     color: #fff; /* Set save button text color */
@@ -572,15 +672,24 @@ main {
     }
 }
 @media (max-width: 481px) {
+    .form-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
     .cancel-button{
         margin-top: -150px;
         margin-bottom: 50px;
-        width: 24%;
-        padding-left: 35px;
+        width: 50%;
+        padding-left: 51px;
+        margin-left: 0px; /* Move the button to the left */
+       
+       align-items: center;
    }
    .save-button{
-       width: 24%;
-       padding-left: 41px;
+       width: 50%;
+       padding-left: 51px;
+      
+
    }
     
     .dropdown-content{
@@ -590,4 +699,6 @@ main {
        margin-bottom: 50px;
        margin-top: -50px;
     }
+
+    
 }
