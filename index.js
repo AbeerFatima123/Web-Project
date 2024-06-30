@@ -22,10 +22,13 @@ app.post('/login', (req, res) => {
     const { email, password } = req.body;
     // login logic here
     console.log(email)
-    if (email == 'hello@gmail.com'  & password == '1') {
+    if (email == 'super@gmail.com'  & password == '1') {
         res.redirect('/Superdashboard');
-    } else {
+    }
+    else if (email == 'john@gmail.com'  & password == '2') {
         res.redirect('/dashboard');
+    } else {
+        res.redirect('/product');
     }
 });
 
@@ -40,6 +43,24 @@ app.post('/signup', (req, res) => {
     res.redirect('/login');
 });
 
+// product
+app.get('/product', (req, res) => {
+    res.sendFile('/pages/order_Products.html', { root: __dirname });
+});
+
+app.get('/place_order', (req, res) => {
+    res.sendFile('/pages/order_Products(step 4).html', { root: __dirname });
+});
+
+// service
+app.get('/service', (req, res) => {
+    res.sendFile('/pages/order services(step1).html', { root: __dirname });
+});
+
+app.get('/book', (req, res) => {
+    res.sendFile('/pages/order services(step2,3,4).html', { root: __dirname });
+});
+
 // homepage
 app.get('/homepage', (req, res) => {
     res.sendFile('/pages/homepage.html', { root: __dirname });
@@ -48,6 +69,26 @@ app.get('/homepage', (req, res) => {
 /// Admin dashboard ///
 app.get('/dashboard', (req, res) => {
     res.sendFile('/pages/dashboard_Page.html', { root: __dirname });
+});
+
+// dashboard product
+app.get('/dashboard_product', (req, res) => {
+    res.sendFile('/pages/Products_Page.html', { root: __dirname });
+});
+
+// dashboard suippliers
+app.get('/supplier', (req, res) => {
+    res.sendFile('/pages/Suppliers.html', { root: __dirname });
+});
+
+// dashboard service
+app.get('/dashboard_service', (req, res) => {
+    res.sendFile('/pages/service_page.html', { root: __dirname });
+});
+
+// dashboard view shop
+app.get('/dashboard_shop', (req, res) => {
+    res.sendFile('/pages/shop(business owner view).html', { root: __dirname });
 });
 
 // shop setup
