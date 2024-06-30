@@ -1,3 +1,4 @@
+const { log } = require('console');
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -12,7 +13,7 @@ app.get('/', (req, res) => {
     res.redirect('/homepage');
 });
 
-//login page
+// login
 app.get('/login', (req, res) => {
     res.sendFile('/pages/login page.html', { root: __dirname });
 });
@@ -20,12 +21,23 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
     // login logic here
-    res.redirect('/dashboard');
+    console.log(email)
+    if (email == 'hello@gmail.com'  & password == '1') {
+        res.redirect('/Superdashboard');
+    } else {
+        res.redirect('/dashboard');
+    }
 });
 
 // sign up page
 app.get('/signup', (req, res) => {
     res.sendFile('/pages/signup page.html', { root: __dirname });
+});
+
+app.post('/signup', (req, res) => {
+    const { email, password } = req.body;
+    // signup logic here
+    res.redirect('/login');
 });
 
 // homepage
@@ -73,12 +85,51 @@ app.get('/dashboard_orders', (req, res) => {
 app.get('/dashboard_invoice', (req, res) => {
     res.sendFile('/pages/orders_and_invoices.html', { root: __dirname });
 });
+
 // notifications
 app.get('/dashboard_notifications', (req, res) => {
     res.sendFile('/pages/Notifications Page.html', { root: __dirname });
 });
 
 /// Super Admin dashboard ///
+
+app.get('/Superdashboard', (req, res) => {
+    res.sendFile('/pages/SuperAdmin_dashboard.html', { root: __dirname });
+});
+
+// members
+app.get('/Superdashboard_members', (req, res) => {
+    res.sendFile('/pages/superAdmin_Members_Page.html', { root: __dirname });
+});
+
+// plan
+app.get('/Superdashboard_plan', (req, res) => {
+    res.sendFile('/pages/SuperAdmin_PlanPage.html', { root: __dirname });
+});
+
+// orders
+app.get('/Superdashboard_orders', (req, res) => {
+    res.sendFile('/pages/SuperAdmin_OrdersPage.html', { root: __dirname });
+});
+
+app.get('/Superdashboard_invoice', (req, res) => {
+    res.sendFile('/pages/SuperAdmin_orders_and_invoices.html', { root: __dirname });
+});
+
+// notifications
+app.get('/Superdashboard_notifications', (req, res) => {
+    res.sendFile('/pages/SuperAdmin-Notification.html', { root: __dirname });
+});
+
+// Landing Page
+app.get('/Superdashboard_landingPage', (req, res) => {
+    res.sendFile('/pages/SuperAdmin_Landing_Page.html', { root: __dirname });
+});
+
+// Settings
+app.get('/Superdashboard_setting', (req, res) => {
+    res.sendFile('/pages/settings.html', { root: __dirname });
+});
 
 // listen for requests
 app.listen(port, () => {
