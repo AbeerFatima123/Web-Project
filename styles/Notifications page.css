@@ -253,6 +253,7 @@ input[type="checkbox"] {
     cursor: pointer;
     position: relative;
     background-color: #fff;
+    margin-left: 30px;
 }
 
 /* Style for the checked state */
@@ -285,12 +286,13 @@ input[type="checkbox"]:checked::before {
     position: relative;
     background-color: #fff;
     margin-right: 8px; /* Space between radio button and label text */
+    margin-left: 30px;
 }
 
 /* Style for the checked state */
 .radio-color:checked {
     background-color: #4680A6;
-    border: 10px solid #4680A6;
+
 }
 
 /* Custom checkmark (optional) */
@@ -526,7 +528,6 @@ input:checked + .slider:before {
     border-color: #B2B2B2; /* Keep the border color same */
     outline: 2px solid #4680A6; /* Change the outline color to blue */
 }
-
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .custom-header {
@@ -772,7 +773,8 @@ input:checked + .slider:before {
     .footer-text span {
         margin-bottom: 10px;
     }
-}@media (max-width: 481px) {
+}
+@media (max-width: 481px) {
     
     .dropdown-content{
         width: 280px;
@@ -781,4 +783,27 @@ input:checked + .slider:before {
        margin-bottom: 50px;
        margin-top: -50px;
     }
+    .notification-form{
+        width: 500px;
+    }
+    .view-template-button1
+    {
+        margin-left: 50px;
+    }
+    .view-template-button2
+    {
+        margin-left: 50px;
+    }
+    .verify-button
+{
+    margin-left: -10px;
+}
+.menu-button{
+    margin-bottom: 50px;
+    margin-top: -100px;
+ }
+ .logo{
+     margin-bottom: 50px;
+    margin-top: 10px;
+ }
 }

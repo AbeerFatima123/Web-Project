@@ -179,6 +179,21 @@ h1 {
     margin-bottom: 20px;
 }
 
+input[type="text"]
+select {
+    width: 100%;
+    height: 46px;
+    padding: 13px 16.8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus
+select:focus {
+    border-color: #4680A6;
+    outline: none;
+}
 .integration-sections {
     display: flex;
     flex-wrap: wrap;

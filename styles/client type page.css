@@ -207,12 +207,12 @@ main {
 
 .tab-buttons {
     display: flex;
-    gap: 200px;
+    gap: 100px;
     margin-bottom: 20px;
 }
 
 .tab-button {
-    padding: 10px 70px;
+    padding: 10px 50px;
     /* Increased horizontal padding */
     min-width: 120px;
     /* Set a minimum width */
@@ -222,7 +222,7 @@ main {
     cursor: pointer;
     transition: background-color 0.3s ease;
     /* Smooth transition */
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .tab-button.active,
@@ -230,66 +230,65 @@ main {
     background-color: #4680A6;
     /* Background color on hover and active state */
     color: #fff;
-}
-
-.project-form {
+}.project-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    /* Adjust the gap between form groups as needed */
+    gap: 0px; /* No additional gap */
 }
 
-.project-form .form-group {
-    flex: 1 1 calc(50% - 1rem);
-    /* Adjusting width to take half the available space minus the gap */
-    min-width: 200px;
-    /* Ensure that the fields have a minimum width */
+.form-group {
+    flex: 1 0 20%;
+    min-width: 150px;
+    margin-right: 10px; /* Adjust the space between groups */
+    margin-top: 30px;
 }
 
-.project-form .form-group label {
-    display: block;
-    /* Ensure labels are on top of their input fields */
-    margin-bottom: 0.5rem;
-    /* Add spacing between label and input */
+.form-group:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.form-group label {
     color: #4680A6;
-    /* Set label color to blue */
+    margin-bottom: 5px;
+    display: block;
 }
 
-.project-form .form-group input {
-    width: 80%;
-    /* Reduce input field width to 80% */
-    padding: 0.5rem;
-    /* Add padding for better appearance */
+input[type="text"],
+input[type="tel"],
+select {
+    width: 60%;
+    height: 36px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    border: 1px solid #B2B2B2;
-    /* Set border style, width, and color */
-    border-radius: 50px;
-    /* Increase border radius to create rounded corners */
+    margin-right: 10px; /* Reduced margin between inputs */
 }
 
-.project-form .form-group select {
-    width: 80%;
-    /* Reduce input field width to 80% */
-    padding: 0.5rem;
-    /* Add padding for better appearance */
-    box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    border: 1px solid #B2B2B2;
-    /* Set border style, width, and color */
-    border-radius: 50px;
-    /* Increase border radius to create rounded corners */
-    appearance: none;
-    /* Remove default arrow in some browsers */
-    background-color: #fff;
-    /* Ensure the background is the same */
-    padding-right: 30px;
-    /* Add some padding to the right for the arrow */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    /* Custom arrow */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
 }
+
+.button-container {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+.form-group:nth-child(2) {
+    margin-right: 650px;
+}
+
+.label {
+    color: #4680A6;
+    margin-bottom: 5px;
+    display: block;
+}
+
 
 .save-button,
 .cancel-button {
@@ -307,8 +306,11 @@ main {
     transition: background-color 0.3s ease;
     /* Smooth transition */
     border-radius: 50px;
+   
 }
-
+.cancel-button{
+    margin-left: 50px;
+}
 .save-button {
     background-color: #4680A6;
     /* Set save button color */
@@ -319,6 +321,36 @@ main {
     background-color: #4680A6;
     color: #fff;
 }
+
+/* Style for the checked state */
+input[type="checkbox"]:checked {
+    background-color: #4680A6;
+    border: 2px solid #4680A6;
+}
+
+/* Add a checkmark (optional) */
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.create-order-button {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px; /* Rounded corners */
+}
+
 
 .edit-button:hover,
 .delete:hover {

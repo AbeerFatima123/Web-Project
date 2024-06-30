@@ -188,16 +188,14 @@ main {
     color: #4680A6;
 }
 
-
 .tab-buttons {
     display: flex;
-    gap: 200px;
+    gap: 100px;
     margin-bottom: 20px;
-    margin-left: 50px;
 }
 
 .tab-button {
-    padding: 10px 70px;
+    padding: 10px 50px;
     /* Increased horizontal padding */
     min-width: 120px;
     /* Set a minimum width */
@@ -206,12 +204,14 @@ main {
     color: #4680A6;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px;
+    /* Smooth transition */
+    border-radius: 10px;
 }
 
 .tab-button.active,
 .tab-button:hover {
     background-color: #4680A6;
+    /* Background color on hover and active state */
     color: #fff;
 }
 
@@ -625,12 +625,29 @@ main {
     }
 }
 @media (max-width: 481px) {
+    .Payment_text{
+        width: 1000px;
+        margin-left: -90px;
+        margin-top: -10px;
+       
+    }
+    .download-button{
+        margin-left: 200px;
+    }
+    .orders-invoices{
+        width: 500px;
+    }
    
     .dropdown-content{
         width: 280px;
     }
     .menu-button{
        margin-bottom: 50px;
-       margin-top: -50px;
+       margin-top: -100px;
     }
+    .logo{
+        margin-bottom: 50px;
+       margin-top: 10px;
+    }
+
 }
