@@ -136,6 +136,10 @@ app.get('/dashboard_invoice', (req, res) => {
     res.sendFile('/pages/orders_and_invoices.html', { root: __dirname });
 });
 
+app.get('/dashboard_order_detail', (req, res) => {
+    res.sendFile('/pages/orders_and_invoinces_details.html', { root: __dirname });
+});
+
 // notifications
 app.get('/dashboard_notifications', (req, res) => {
     res.sendFile('/pages/Notifications Page.html', { root: __dirname });
