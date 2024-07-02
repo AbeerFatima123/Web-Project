@@ -16,9 +16,9 @@
         <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
         <nav>
             <ul>
-                <li><button class="nav-button">Services</button></li> <!-- Navigation button for Services -->
-                <li><button class="nav-button">Products</button></li> <!-- Navigation button for Products -->
-                <li><button class="nav-button">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
                 <li class="dropdown">
                     <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
                     <div class="dropdown-content">
@@ -33,13 +33,15 @@
     </header>
 
     <div class="dashboard-column">
-        <h2 class="dashboard-heading">Dashboard</h2>
+        <a href="/dashboard">
+            <h2 class="dashboard-heading">Dashboard</h2>
+        </a>
         <div class="dashboard-links">
-            <button class="dashboard-button">Set Up</button> <!-- Dashboard button for Set Up -->
-            <button class="dashboard-button active">Projects</button> <!-- Active dashboard button for Projects -->
-            <button class="dashboard-button">Clients</button> <!-- Dashboard button for Clients -->
-            <button class="dashboard-button">Orders & Invoices</button> <!-- Dashboard button for Orders & Invoices -->
-            <button class="dashboard-button">Notifications</button> <!-- Dashboard button for Notifications -->
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+            <button class="dashboard-button active" onclick="window.location.href='/dashboard_project'">Projects</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
         </div>
     </div>
 

@@ -17,13 +17,12 @@
         <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
         <nav>
             <ul>
-                 <li class="dropdown">
-                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                <li class="dropdown">
+                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
+                            class="user-image"></button>
                     <div class="dropdown-content">
-                        <a href="#">Help</a> <!-- Dropdown link for Help -->
-                        <a href="#">Password</a> <!-- Dropdown link for Password -->
-                        <a href="#">Subscription</a> <!-- Dropdown link for Subscription -->
-                        <a href="#">Log Out</a> <!-- Dropdown link for Log Out -->
+                        <a href="/homepage">View site</a>
+                        <a href="/login">logout</a>
                     </div>
                 </li>
             </ul>
@@ -32,21 +31,24 @@
 
     <div class="container">
         <div class="dashboard-column">
-            <h2 class="dashboard-heading">Dashboard</h2>
+            <a href="/Superdashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
             <div class="dashboard-links">
-                <button class="dashboard-button">Members</button>
-                <button class="dashboard-button">Plan</button>
-                <button class="dashboard-button active">Orders</button>
-                <button class="dashboard-button ">Notifications</button>
-                <button class="dashboard-button">Landing Page</button>
-                <button class="dashboard-button">Settings</button>     </div>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_members'">Members</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_plan'">Plan</button>
+                <button class="dashboard-button active" onclick="window.location.href='/Superdashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_notifications'">Notifications</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_landingPAge'">Landing Page</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_setting'">Settings</button>
+            </div>
         </div>
 
         <main>
             <div class="orders-invoices">
                 <div class="tab-buttons">
                     <button class="tab-button active">Orders</button> <!-- Active tab button for Orders -->
-                    <button class="tab-button">Invoices</button> <!-- Tab button for Invoices -->
+                    <button class="tab-button"  onclick="window.location.href='/Superdashboard_invoice'">Invoices</button> <!-- Tab button for Invoices -->
                 </div>
                 <button class="create-order-button">+ Create new order</button> <!-- Button to create a new order -->
 

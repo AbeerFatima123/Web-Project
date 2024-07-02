@@ -12,11 +12,11 @@
             display: flex; /* Use flexbox to align children in a row */
             gap: 50px; /* Spacing between flex items */
         }
-        
+
         .invoice-dates p, .invoice-address p {
             margin: 0; /* Remove default margins for paragraphs */
         }
-        
+
         .invoice-totals {
             margin-left: 900px; /* Adjusted left margin for totals section */
         }
@@ -32,16 +32,12 @@
         <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
         <nav>
             <ul>
-                <li><button class="nav-button">Services</button></li> <!-- Navigation button for Services -->
-                <li><button class="nav-button">Products</button></li> <!-- Navigation button for Products -->
-                <li><button class="nav-button">View Shop</button></li> <!-- Navigation button for View Shop -->
                 <li class="dropdown">
-                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
+                            class="user-image"></button>
                     <div class="dropdown-content">
-                        <a href="#">Help</a> <!-- Dropdown link for Help -->
-                        <a href="#">Password</a> <!-- Dropdown link for Password -->
-                        <a href="#">Subscription</a> <!-- Dropdown link for Subscription -->
-                        <a href="#">Log Out</a> <!-- Dropdown link for Log Out -->
+                        <a href="/homepage">View site</a>
+                        <a href="/login">logout</a>
                     </div>
                 </li>
             </ul>
@@ -64,7 +60,7 @@
         <main>
             <div class="button-container">
                 <div class="tab-buttons">
-                    <button class="tab-button ">Orders</button> <!-- Tab button for Orders -->
+                    <button class="tab-button " onclick="window.location.href='/Superdashboard_orders'">Orders</button> <!-- Tab button for Orders -->
                     <button class="tab-button active">Invoices</button> <!-- Active tab button for Invoices -->
                 </div>
             </div>
