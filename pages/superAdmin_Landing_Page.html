@@ -17,12 +17,12 @@
         <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
         <nav>
             <ul>
-                <li><button class="nav-button">Orders</button></li>
                 <li class="dropdown">
-                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
+                            class="user-image"></button>
                     <div class="dropdown-content">
-                        <a href="#">Register</a>
-                        <a href="#">Contact Us</a>
+                        <a href="/homepage">View site</a>
+                        <a href="/login">logout</a>
                     </div>
                 </li>
             </ul>
@@ -31,21 +31,23 @@
 
     <div class="container">
         <div class="dashboard-column">
-            <h2 class="dashboard-heading">Dashboard</h2>
+            <a href="/Superdashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
             <div class="dashboard-links">
-                <button class="dashboard-button">Members</button>
-                <button class="dashboard-button">Plan</button>
-                <button class="dashboard-button">Orders</button>
-                <button class="dashboard-button">Notifications</button>
-                <button class="dashboard-button active">Landing Page</button>
-                <button class="dashboard-button">Settings</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_members'">Members</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_plan'">Plan</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_notifications'">Notifications</button>
+                <button class="dashboard-button active" onclick="window.location.href='/Superdashboard_landingPAge'">Landing Page</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_setting'">Settings</button>
             </div>
         </div>
 
         <main>
             <div class="landing-page-section">
                 <div class="landing-controls">  <button class="landing-button">Landing Page</button>
-                  <div class="landing-dropdown-content">
+                <div class="landing-dropdown-content">
                     <button class="landing-dropdown-item" id="top-bar-link">Top Bar</button>
                     <button class="landing-dropdown-item">Course Page</button>
                     <button class="landing-dropdown-item">Hero</button>
@@ -56,20 +58,19 @@
                     <button class="landing-dropdown-item">FAQ</button>
                     <button class="landing-dropdown-item">Testimonials</button>
                     <button class="landing-dropdown-item">Join Us</button>
-                  </div>
+                </div>
                 </div>
                 <div class="landing-page-form" id="top-bar-form">
-                  <div class="form-group">
+                <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" rows="4" placeholder="Type Special Offer. Don't miss it. The offer ends in 24 hours."></textarea>
-                  </div>
-                  <div class="form-actions">
+                </div>
+                <div class="form-actions">
                     <button class="save-button" type="button">Save</button>
                     <button class="cancel-button" type="button">Cancel</button>
-                  </div>
                 </div>
-              </div>
-              
+                </div>
+            </div>
         </main>
     </div>
 
