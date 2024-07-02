@@ -76,9 +76,18 @@ app.get('/dashboard_product', (req, res) => {
     res.sendFile('/pages/Products_Page.html', { root: __dirname });
 });
 
-// dashboard suippliers
+// dashboard suppliers
 app.get('/supplier', (req, res) => {
     res.sendFile('/pages/Suppliers.html', { root: __dirname });
+});
+
+// dashboard billing / subscription
+app.get('/dashboard_subscription', (req, res) => {
+    res.sendFile('/pages/subscription_Page.html', { root: __dirname });
+});
+
+app.get('/dashboard_billing', (req, res) => {
+    res.sendFile('/pages/subscription_billing.html', { root: __dirname });
 });
 
 // dashboard service
