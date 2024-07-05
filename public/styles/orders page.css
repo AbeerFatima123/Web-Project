@@ -352,7 +352,6 @@ main {
     transition: background-color 0.3s ease;
     border-radius: 50px;
 }
-
 .save-button {
     background-color: #4680A6;
     /* Set save button color */
@@ -375,8 +374,7 @@ main {
 .cancel:hover{
     color: #4680A6;
 }
-.edit-button,
-.cancel {
+.edit-button {
     background-color: transparent;
     /* Remove background color */
     border: none;
@@ -384,6 +382,20 @@ main {
     padding: 0;
     /* Remove padding */
     margin: 0;
+    /* Remove margin */
+    cursor: pointer;
+    /* Maintain cursor for hover effect */
+    color: inherit;
+    /* Inherit table cell text color */
+}
+.cancel {
+    background-color: transparent;
+    /* Remove background color */
+    border: none;
+    /* Remove border */
+    padding: 0;
+    /* Remove padding */
+   margin-left: 30px;
     /* Remove margin */
     cursor: pointer;
     /* Maintain cursor for hover effect */
