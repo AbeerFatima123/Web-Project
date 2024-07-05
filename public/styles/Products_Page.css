@@ -285,8 +285,7 @@ button.create-order-button {
 .form-actions{
     margin-left: 600px;
 }
-.save-button,
-.cancel-button {
+.save-button {
     padding: 15px 50px;
     /* Increased top and bottom padding */
     margin-top: 50px;
@@ -301,7 +300,23 @@ button.create-order-button {
     transition: background-color 0.3s ease;
     border-radius: 50px;
 }
+.cancel-button {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 50px;
+    /* Add some top margin */
 
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    /* Save button default color */
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    margin-left: 10px;
+
+}
 .save-button {
     background-color: #4680A6;
     /* Set save button color */
@@ -570,7 +585,9 @@ input:checked + .slider:before {
     cursor: pointer;
     color: #4680A6;
 }
-
+.delete-button{
+    margin-left: 20px;
+}
 .edit-button:hover,
 .delete-button:hover {
     color: #356582;

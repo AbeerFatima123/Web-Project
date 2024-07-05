@@ -15,6 +15,7 @@ body {
     align-items: center;
 }
 
+
 /* Custom header styles */
 .custom-header {
     position: fixed;
@@ -22,26 +23,21 @@ body {
     width: 100%;
     height: 80px;
     background-color: #4680A6;
-    /* Header background color */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
     z-index: 1000;
-    /* Ensure the header is above other content */
 }
 
 .custom-header .logo img {
     height: 40px;
-    /* Logo height */
 }
 
 .custom-header nav ul {
     list-style: none;
-    /* Remove default list styling */
     display: flex;
     gap: 1rem;
-    /* Space between navigation items */
 }
 
 .custom-header nav ul li {
@@ -56,23 +52,19 @@ body {
     border: none;
     cursor: pointer;
     padding: 0 20px;
-    /* Add horizontal padding to create space */
 }
 
 .user-image {
     height: 40px;
     border-radius: 50%;
-    /* Circular user image */
 }
 
 .nav-button img {
     display: block;
 }
 
-/* Add margin to the user image button */
 .custom-header .user-image {
     margin-left: 20px;
-    /* Adjust this value to add more or less space */
 }
 /* Toggle Menu Button */
 .menu-button {
@@ -86,15 +78,14 @@ body {
 
 #menu-toggle {
     display: none;
-} 
+}
 
-/* Container for layout */
 .container {
     display: flex;
     width: 100%;
+    margin-top: 80px;
 }
 
-/* Dropdown Menu */
 .dropdown {
     position: relative;
 }
@@ -122,28 +113,20 @@ body {
 
 .dropdown.show .dropdown-content {
     display: block;
-    /* Show dropdown content when dropdown is active */
 }
 
-/* Dashboard column styles */
 .dashboard-column {
     position: fixed;
     left: 0;
     top: 80px;
-    /* Start below the header */
     height: calc(100% - 80px);
-    /* Full height minus header */
     width: 200px;
-    /* Fixed width */
     background-color: #fff;
-    /* White background */
     padding: 20px 0;
     box-sizing: border-box;
     text-align: center;
     border-right: 1px solid #DADADA;
-    /* Right border */
     overflow-y: auto;
-    /* Scroll if content is too long */
 }
 
 .dashboard-heading {
@@ -152,13 +135,13 @@ body {
     margin-bottom: 20px;
     font-family: 'Inter', sans-serif;
     border-bottom: 1px solid #DADADA;
-    /* Bottom border */
 }
 
 .dashboard-links {
     display: flex;
     flex-direction: column;
-    /* Stack buttons vertically */
+    gap: 10px;
+    left: 20px;
 }
 
 .dashboard-button {
@@ -166,30 +149,24 @@ body {
     color: black;
     border: none;
     padding: 12px 20px;
-    margin-bottom: 10px;
     cursor: pointer;
+    text-align: center;
     transition: background-color 0.3s ease;
+
 }
 
 .dashboard-button.active,
 .dashboard-button:hover {
     background-color: #F2FAFF;
-    /* Change background on hover or active state */
 }
 
 main {
     flex: 1;
-    padding: 20px;
-    margin-top: 80px;
-    /* Ensure content starts below the fixed header */
+    padding: 20px 16px;
     margin-left: 200px;
-    /* Adjust for the width of the fixed dashboard column */
     overflow-y: auto;
-    /* Enable vertical scrolling for content */
     box-sizing: border-box;
-    /* Include padding and border in element's total width and height */
 }
-
 main h1 {
     color: #4680A6;
 }
@@ -198,9 +175,11 @@ main h1 {
     margin-left: 200px;
     text-align: left;
 }
-.Subscription a{
+
+.Subscription a {
     color: #4680A6;
 }
+
 .subscription-plan {
 
     margin-left: 200px;
@@ -214,32 +193,40 @@ main h1 {
 
 .subscription-plan {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
+    /* Center the content horizontally */
 }
 
 .plan-container {
     display: flex;
-    justify-content: space-between; /* Add space between the plan details and image */
-    align-items: center; /* Align items vertically in the center */
-    gap: 20px; /* Add gap between the elements */
+    justify-content: space-between;
+    /* Add space between the plan details and image */
+    align-items: center;
+    /* Align items vertically in the center */
+    gap: 20px;
+    /* Add gap between the elements */
 }
 
 
 
 .plan-image img {
-    max-width: 100%; /* Ensure the image doesn't overflow */
-    height: auto; /* Maintain the aspect ratio of the image */
+    max-width: 80%;
+    /* Ensure the image doesn't overflow */
+    height: auto;
+    /* Maintain the aspect ratio of the image */
 }
 
 .plan-image {
-    flex-shrink: 0; /* Prevent the image from shrinking */
-    max-width: 200px; /* Set a maximum width for the image */
+    flex-shrink: 0;
+    /* Prevent the image from shrinking */
+    max-width: 200px;
+    /* Set a maximum width for the image */
 }
 
 .plan-details {
     color: #4680A6;
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 20px;
     text-align: left;
 }
 
@@ -376,12 +363,14 @@ main h1 {
 .social-links img {
     height: 24px;
 }
-
+.button-container{
+    display: flex;
+}
 .upgrade-button {
     padding: 15px 50px;
     /* Increased top and bottom padding */
     margin-top: 50px;
-    margin-left: 80px;
+    margin-left: 60px;
     /* Add some top margin */
     margin-bottom: 50px;
     display: inline;
@@ -392,11 +381,43 @@ main h1 {
     /* Save button default color */
     background-color: #4680A6;
     /* Save button default color */
-  
+
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
+    border-radius: 50px;
+
+}
+
+.upgrade-button:hover {
+    color: #4680A6;
+    /* Save button default color */
+    background-color: #fff;
+}
+
+.Delete:hover {
+    background-color: red;
+    color: white;
+}
+
+.Delete {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 50px;
+    margin-left: 20px;
+    display: inline;
+    /* Add some top margin */
+    margin-bottom: 50px;
+
+    /* Increase bottom margin for more space */
+    border: 1px solid red;
+    background-color: #fff;
+    /* Save button default color */
+    color: red;
+    cursor: pointer;
+
     border-radius: 50px;
 }
+
 button.create-order-button {
     all: unset;
     /* Resets all inherited styles */
@@ -455,12 +476,12 @@ button.create-order-button {
 }
 
 /* Checkbox checked state */
-input:checked + .slider {
+input:checked+.slider {
     background-color: #4680A6;
 }
 
 /* Move the slider to the right when checked */
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
@@ -472,30 +493,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-.upgrade-button:hover {
-    color: #4680A6;
-    /* Save button default color */
-    background-color: #fff;
-}
-.Delete:hover{
-    background-color: red;
-    color: white;
-}
-.Delete{ padding: 15px 50px;
-    /* Increased top and bottom padding */
-    margin-top: 50px;
- 
-    /* Add some top margin */
-    margin-bottom: 50px;
-    display: inline;
-    /* Increase bottom margin for more space */
-    border: 1px solid red;
-    background-color: #fff;
-    /* Save button default color */
-    color: red;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 50px;}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
 
@@ -519,6 +517,7 @@ input:checked + .slider:before {
     .dropdown-menu {
         width: 100%;
     }
+
     .container {
         flex-direction: column;
     }
@@ -535,6 +534,7 @@ input:checked + .slider:before {
         margin-left: 0;
         padding: 20px 16px;
     }
+
     .task-header,
     .task {
         grid-template-columns: repeat(3, 1fr);
@@ -553,13 +553,17 @@ input:checked + .slider:before {
         height: 80px;
         background-color: #4680A6;
         display: flex;
-        align-items: center;  /* This centers elements vertically */
+        align-items: center;
+        /* This centers elements vertically */
         padding: 0 16px;
         z-index: 1000;
-      }
+    }
+
     .custom-header nav {
-        display: none; /* Hide the menu by default */
-      }
+        display: none;
+        /* Hide the menu by default */
+    }
+
     .custom-header nav ul {
         flex-direction: column;
         align-items: flex-start;
@@ -569,6 +573,7 @@ input:checked + .slider:before {
     .custom-header nav ul li {
         width: 100%;
     }
+
     .dropdown-content {
         display: block;
         position: absolute;
@@ -578,23 +583,27 @@ input:checked + .slider:before {
         z-index: 1;
         min-width: 160px;
     }
-    .dropdown.show  {
-      
+
+    .dropdown.show {
+
         width: 80%;
     }
-   .menu-button {
-  display: block;  /* Ensure the button is always displayed */
-  font-size: 30px;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: auto;  /* Move the button to the left side */
 
-}
+    .menu-button {
+        display: block;
+        /* Ensure the button is always displayed */
+        font-size: 30px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        /* Move the button to the left side */
+
+    }
 
 
-    #menu-toggle:checked + .menu-button + nav {
+    #menu-toggle:checked+.menu-button+nav {
         display: block;
         position: absolute;
         background: #4680A6;
@@ -604,11 +613,11 @@ input:checked + .slider:before {
         text-align: center;
     }
 
-    #menu-toggle:checked + .menu-button + nav ul {
+    #menu-toggle:checked+.menu-button+nav ul {
         flex-direction: column;
     }
 
-    #menu-toggle:checked + .menu-button + nav ul li {
+    #menu-toggle:checked+.menu-button+nav ul li {
         margin: 1rem 0;
     }
 
@@ -616,6 +625,7 @@ input:checked + .slider:before {
     .nav-button img {
         display: block;
     }
+
     .custom-header {
         flex-direction: column;
         align-items: flex-start;
@@ -650,7 +660,8 @@ input:checked + .slider:before {
         flex-direction: column;
         align-items: center;
     }
-    .dropdown-content{
+
+    .dropdown-content {
         width: 280px;
         align-items: center;
     }
@@ -670,6 +681,7 @@ input:checked + .slider:before {
         text-align: left;
         padding-left: 10px;
     }
+
     .dropdown-content {
         display: block;
         position: absolute;
@@ -679,8 +691,9 @@ input:checked + .slider:before {
         z-index: 1;
         min-width: 160px;
     }
-    .dropdown.show  {
-      
+
+    .dropdown.show {
+
         width: 80%;
     }
 
@@ -744,43 +757,49 @@ input:checked + .slider:before {
         align-items: center;
     }
 }
+
 @media (max-width: 481px) {
-    
-    .dropdown-content{
+
+    .dropdown-content {
         width: 280px;
     }
-    
-    .menu-button{
+
+    .menu-button {
         margin-bottom: 50px;
         margin-top: -100px;
-     }
-     .logo{
-         margin-bottom: 50px;
+    }
+
+    .logo {
+        margin-bottom: 50px;
         margin-top: 10px;
-     }
-     .subscription-plan{
+    }
+
+    .subscription-plan {
         width: 500px;
         margin-left: 100px;
-     }
+    }
 
-    button.create-order-button{
-        margin-left:100px; 
+    button.create-order-button {
+        margin-left: 100px;
         width: 200px;
         margin-top: 50px;
 
-     }
-     .Delete{
+    }
+
+    .Delete {
         margin-top: -150px;
         margin-bottom: 50px;
         width: 50%;
         padding-left: 45px;
-        margin-left: 80px; /* Move the button to the left */  
+        margin-left: 80px;
+        /* Move the button to the left */
         align-items: center;
-    
-   }
-   .upgrade-button{
-       width: 50%;
-       padding-left: 45px;
-   }
-     
+
+    }
+
+    .upgrade-button {
+        width: 50%;
+        padding-left: 45px;
+    }
+
 }

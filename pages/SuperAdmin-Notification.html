@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Notifications</title>
-    <link rel="stylesheet" href="../styles/SuperAdmin-Notification.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="../styles/Notifications page.css"> <!-- Link to external CSS file -->
 </head>
 
 <body>
@@ -18,12 +18,18 @@
         <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
         <nav>
             <ul>
+                <!-- Navigation links -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
                 <li class="dropdown">
-                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
-                            class="user-image"></button>
+                    <!-- Dropdown menu with user options -->
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
                     <div class="dropdown-content">
-                        <a href="/homepage">View site</a>
-                        <a href="/login">logout</a>
+                        <a href="#">Help</a>
+                        <a href="#">Password</a>
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
                     </div>
                 </li>
             </ul>
@@ -34,16 +40,15 @@
         <!-- Main content container -->
         <div class="dashboard-column">
             <!-- Dashboard section -->
-            <a href="/Superdashboard">
+            <a href="/dashboard">
                 <h2 class="dashboard-heading">Dashboard</h2>
             </a>
             <div class="dashboard-links">
-                <button class="dashboard-button active" onclick="window.location.href='/Superdashboard_members'">Members</button>
-                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_plan'">Plan</button>
-                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_orders'">Orders & Invoices</button>
-                <button class="dashboard-button active" onclick="window.location.href='/Superdashboard_notifications'">Notifications</button>
-                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_landingPAge'">Landing Page</button>
-                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_setting'">Settings</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button active" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
             </div>
         </div>
 
@@ -64,14 +69,14 @@
                             <div class="input-container">
                                 <input class="input" type="text" value="" placeholder="Enter a different Email">
                                 <input class="input1" type="text" placeholder="Phone Number">
+                                <button class="verify-button">Verify</button>
                             </div>
-                            <br>
-                            <button class="verify-button ">Verify</button>
                             <p class="content">You will send and receive notifications to this email and phone number</p>
                         </div>
                     </div>
                     <hr><br>
                     <div class="form-group">
+                        <button class="view-template-button1">View Template</button>
                         <label>Order Confirmation</label>
                         <div class="booking-confirmation">
                             <!-- Booking confirmation settings -->
@@ -81,15 +86,15 @@
                             <input class="remember-me" type="checkbox" class="checkbox"> Text
                             <br>
                             <br>
-                            <p class="content">Send me a notification as well? </p>
+                            <p class="content">Send me a notification as well?</p>
                             <br>
                             <input class="radio-color" type="radio" name="booking-notification" checked> Yes
                             <input class="radio-color" type="radio" name="booking-notification" class="checkbox"> No
-                            <button class="view-template-button1">View Template</button><br>
                         </div>
                     </div>
                     <hr><br>
                     <div class="form-group">
+                        <button class="view-template-button1">View Template</button>
                         <label>Subcription Trial  Reminder</label>
                         <div class="invoice-reminder">
                             <!-- Invoice reminder settings -->
@@ -103,11 +108,12 @@
                             Send me a notification as well?<br>
                             <input class="radio-color" type="radio" name="invoice-notification" class="checkbox" checked> Yes
                             <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> No
-                            <button class="view-template-button1">View Template</button><br>
+                            
                         </div>
                     </div>
                     <hr><br>
                     <div class="form-group">
+                        <button class="view-template-button1">View Template</button>
                         <label>How to Use the Software</label>
                         <div class="appointment-reminder">
                             <!-- Appointment reminder settings -->
@@ -116,23 +122,25 @@
                                 <input class="input" type="text" value="6">
                                 <input class="input1" type="text" placeholder="min/hours/day">
                             </div>
-                            <br>
+                    
                             <input class="remember-me" type="checkbox" checked> Email
                             <input class="remember-me" type="checkbox" class="checkbox"> Text
                             <br>
                             Send me a notification as well?<br>
                             <input class="radio-color" type="radio" name="invoice-notification" checked> Yes
                             <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> No
-                            <button class="view-template-button2">View Template</button><br>
-                            <br>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
+                           
+                          
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                       
                         </div>
                     </div>
                     <hr><br>
                     <div class="form-group">
+                        <button class="view-template-button1">View Template</button>
                         <label>Thank You Message</label>
                         <div class="thank-you-message">
                             <!-- Thank you message settings -->
@@ -144,8 +152,7 @@
                             <br>
                             <input class="remember-me" type="checkbox" checked> Email
                             <input class="remember-me" type="checkbox" class="checkbox"> Text
-                            <button class="view-template-button1">View Template</button>
-                            <br>
+                           
                             <label class="switch">
                                 <input type="checkbox">
                                 <span class="slider round"></span>
@@ -154,13 +161,13 @@
                     </div>
                     <hr><br>
                     <div class="form-group">
+                        <button class="view-template-button1">View Template</button>
                         <label> Feedback</label>
                         <div class="booking-feedback">
                             <!-- Booking feedback settings -->
                             <p class="content"> This notification can be sent after booking is completed</p>
-                            <button class="view-template-button1">View Template</button>
-                            <br>
-                            <label class="switch">
+                           
+                            <label class="switch1">
                                 <input type="checkbox">
                                 <span class="slider round"></span>
                             </label>
@@ -168,13 +175,13 @@
                     </div>
                     <hr><br>
                     <div class="form-group">
-                        <label >Cancellation Policy</label>
+                        <button class="view-template-button1">View Template</button>
+                        <label> Cancellation Policy</label>
                         <div class="contract-policy">
                             <!-- Contract and cancellation policy settings -->
                             <p class="content"> This message can be included into any appointment and order that you created.</p>
-                            <button class="view-template-button1">View Template</button>
-                            <br>
-                            <label class="switch">
+                            
+                            <label class="switch1">
                                 <input type="checkbox">
                                 <span class="slider round"></span>
                             </label>
